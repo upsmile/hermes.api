@@ -30,10 +30,15 @@ namespace Hermes.Way.Api.Controllers
                 config.Date = DateTime.Parse(date, new CultureInfo("ru-Ru"));
                 var service = unity.Resolve<TrWayPointsService>();
                 var res = await service.Get(config);
-                var result = new HttpResponseMessage()
+                HttpResponseMessage result = null;
+                if (res.Exception == null)
                 {
-                    StatusCode = System.Net.HttpStatusCode.OK
-                };
+                    result = Request.CreateResponse(System.Net.HttpStatusCode.OK, res.Result);
+                }
+                else
+                {
+                    Request.CreateResponse(System.Net.HttpStatusCode.InternalServerError, res.Exception);
+                }
                 return result;
             }).ConfigureAwait(false);
 

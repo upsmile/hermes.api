@@ -20,7 +20,8 @@ namespace Hermes.Way.Api.Services
         {
             try
             {
-                return (object)new DISTRDEVDataContext.DISTRDEVDataContext(ConfigurationManager.ConnectionStrings["distributor"].ConnectionString);
+                return (object)new DISTRDEVDataContext
+                    .DISTRDEVDataContext(ConfigurationManager.ConnectionStrings["distributor"].ConnectionString);
             }
             catch (Exception ex)
             {
