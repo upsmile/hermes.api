@@ -12,7 +12,14 @@ namespace Hermes.Way.Api.Services
                 var result = new TaWayPointsResult();
                 try
                 {
-                    result.Result = new OracleDataHelper().GetDeliveryVehiclesPoint(config.Date, config.Id);
+                    var helper = new OracleDataHelper();
+                    helper.EndLoadData += argument =>{
+                        if(argument.Result != null)
+                            result.Result = argument.Result;
+                        if(argument.Exception != null)
+                            result.Exception = argument.Exception;
+                    };
+                    helper.GetTaPoints(config.Id, config.Date, config.Date);
                 }
                 catch (Exception exception)
                 {
