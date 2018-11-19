@@ -149,6 +149,10 @@
     <Compile Include="Models\TaWayPointsResult.cs" />
     <Compile Include="Services\TaWayPointsService.cs" />
     <Compile Include="Services\TaWayPointsServiceConfig.cs" />
+    <Compile Include="Services\TrWayPointsConfig.cs" />
+    <Compile Include="Models\TrWayPointsResult.cs" />
+    <Compile Include="Services\TrWayPointsService.cs" />
+    <Compile Include="Services\WayPointUnityExtention.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

@@ -13,5 +13,4 @@ namespace Hermes.Way.Api.Services
     {
         Task<TResult> Get(TConfig config);
     }
-
 }
