@@ -14,7 +14,7 @@ namespace Hermes.Way.Api.Test
         public void GetShopAdressInfo(double code)
         {
             var helper = new OracleDataHelper();
-            var info = helper.GetShopAdressInfo(code);
+            var info = OracleDataHelper.GetShopAdressInfo(code);
             info.Should().NotBeNullOrEmpty();
         }
 
@@ -24,7 +24,7 @@ namespace Hermes.Way.Api.Test
         {
             var helper = new OracleDataHelper();
             var date = DateTime.Parse(datestr, new CultureInfo("ru-Ru"));
-            var info = helper.GetDeliveryVehiclesPoint(date, carId);
+            var info = OracleDataHelper.GetDeliveryVehiclesPoint(date, carId);
             info.Should().NotBeNull();
         }
 
@@ -42,4 +42,5 @@ namespace Hermes.Way.Api.Test
             helper.GetTaPoints(positionId, date, date);
         }
     }
+
 }

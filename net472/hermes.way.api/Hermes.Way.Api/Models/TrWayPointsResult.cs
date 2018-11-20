@@ -1,5 +1,6 @@
 ﻿using System;
-namespace Hermes.Way.Api.Services
+
+namespace Hermes.Way.Api.Models
 {
     public sealed class TrWayPointsResult : IWayPointsResult
     {

@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Threading.Tasks;
+using Hermes.Way.Api.Models;
+
 namespace Hermes.Way.Api.Services
 {
     public sealed class TrWayPointsService : IWayPointsService<TrWayPointsConfig, TrWayPointsResult>
@@ -13,7 +15,7 @@ namespace Hermes.Way.Api.Services
                 var helper = new OracleDataHelper();
                 try
                 {
-                    result.Result = helper.GetDeliveryVehiclesPoint(config.Date, config.TransportId);
+                    result.Result = OracleDataHelper.GetDeliveryVehiclesPoint(config.Date, config.Id);
                 }
                 catch (Exception exception)
                 {
