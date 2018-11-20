@@ -1,10 +1,15 @@
 ﻿using System;
 using System.Threading.Tasks;
+using Hermes.Way.Api.Models;
 
 namespace Hermes.Way.Api.Services
 {
     public sealed class TaWayPointsService : IWayPointsService<TaWayPointsServiceConfig, TaWayPointsResult>
     {
+        public TaWayPointsService()
+        {
+        }
+
         public async Task<TaWayPointsResult> Get(TaWayPointsServiceConfig config)
         {
            return await Task<TaWayPointsResult>.Factory.StartNew(() =>

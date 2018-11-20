@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Hermes.Way.Api.Services
+namespace Hermes.Way.Api.Models
 {
     /// <summary>
     ///  результат

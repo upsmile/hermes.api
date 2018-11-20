@@ -1,4 +1,6 @@
 ﻿using System.Threading.Tasks;
+using Hermes.Way.Api.Models;
+
 namespace Hermes.Way.Api.Services
 {
 
@@ -13,5 +15,4 @@ namespace Hermes.Way.Api.Services
     {
         Task<TResult> Get(TConfig config);
     }
-
 }
