@@ -1,0 +1,2 @@
+docker build -t aspnetapp .
+docker run -d -p 8088:5000 --name hermes.cache.api aspnetapp

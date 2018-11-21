@@ -1,0 +1,12 @@
+﻿
+{
+  "profiles" : {
+    "CacheServices": {
+      "commandName": "Project",
+        "environmentVariables": {
+          "ASPNETCORE_ENVIRONMENT": "Stage"
+      }
+      
+    }
+  }
+}
